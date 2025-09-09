@@ -24,7 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased overflow-x-hidden`}>
       <body className="overflow-x-hidden">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          storageKey="demo-app-theme"
+          disableTransitionOnChange
+        >
           <Suspense fallback={null}>
             <AuthProvider>
               <AppProvider>
